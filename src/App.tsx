@@ -1,4 +1,5 @@
 import React from 'react';
+import Counter from './Counter';
 
 // 型定義はinterfaceで定義してPropsで用いる
 interface AppProps {
@@ -7,7 +8,12 @@ interface AppProps {
 
 // コンポーネントに対して型定義する
 const App: React.FunctionComponent<AppProps> = ({ message }) => { // 型引数を受け取ることができる
-  return <div>{message}</div>;
+  return (
+    <>
+      <div>{message}</div>
+      <Counter />
+    </>
+  )
 };
 
 // .defaultProps
